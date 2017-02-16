@@ -1,6 +1,8 @@
+GOPHERJS_PKG=$(subst $(GOPATH)/src/,,$(PWD))
+
 # Start the dev server.
 start:
-	@gopherjs -m -v serve --http :3000 $(GOPHERJS_PKG)
+	@gopherjs -m -v serve --http :3000 $(GOPHERJS_PKG)/client
 .PHONY: start
 
 # Display dependency graph.
