@@ -7,7 +7,7 @@ start:
 
 # Display dependency graph.
 deps.graph:
-	@godepgraph $(GOPHERJS_PKG) | dot -Tsvg | browser
+	@godepgraph $(GOPHERJS_PKG)/client | dot -Tsvg | browser
 .PHONY: deps.graph
 
 # Display size of dependencies.
