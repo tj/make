@@ -1,5 +1,5 @@
 
-# Display to-do items per file.
+# Output to-do items per file.
 todo:
 	@grep \
 		--exclude-dir=./vendor \
