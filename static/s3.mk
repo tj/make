@@ -4,7 +4,7 @@ $(error S3_BUCKET is required)
 endif
 
 ifndef S3_DIR
-$(error S3_DIR is required, and should point to the static files directory for syncing.)
+$(error S3_DIR is required, and should point to the static files directory for syncing)
 endif
 
 # Sync static site to S3.
