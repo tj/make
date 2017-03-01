@@ -1,5 +1,5 @@
 
-include github.com/tj/make/static/hugo
+include github.com/tj/make/static/s3
 
 ifndef HUGO_DOMAIN
 $(error HUGO_DOMAIN is required, and should be a schemaless domain name such as example.com)
@@ -27,6 +27,6 @@ clean:
 .PHONY: clean
 
 # Deploy hugo site.
-deploy: build static.sync
+deploy: build s3.sync
 	@echo "==> deployed"
 .PHONY: deploy

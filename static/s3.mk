@@ -8,7 +8,7 @@ $(error S3_DIR is required, and should point to the static files directory for s
 endif
 
 # Sync static site to S3.
-static.sync:
+s3.sync:
 	@echo "==> syncing $(S3_DIR) to $(S3_BUCKET)"
 	@aws s3 sync $(S3_DIR) s3://$(S3_BUCKET)
 .PHONY: static.sync
