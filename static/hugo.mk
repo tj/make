@@ -16,7 +16,7 @@ start:
 # Build hugo site.
 build:
 	@echo "==> building"
-	@hugo --baseURL $(HUGO_BASE_URL) -d $(HUGO_BUILD_DIR)
+	@hugo --quiet --baseURL $(HUGO_BASE_URL) -d $(HUGO_BUILD_DIR)
 .PHONY: build
 
 # Clean build artifacts.
