@@ -10,7 +10,7 @@ HUGO_PORT ?= 3000
 
 # Start hugo server.
 hugo.start:
-	@hugo serve -w --quiet --forceSyncStatic -p $(HUGO_PORT)
+	@hugo serve -v -w --quiet --forceSyncStatic -p $(HUGO_PORT)
 .PHONY: start
 
 # Build hugo site.
