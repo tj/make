@@ -9,17 +9,17 @@ HUGO_BASE_URL = $(HUGO_PROTOCOL)://$(HUGO_DOMAIN)
 HUGO_PORT ?= 3000
 
 # Start hugo server.
-start:
+hugo.start:
 	@hugo serve -w --quiet --forceSyncStatic -p $(HUGO_PORT)
 .PHONY: start
 
 # Build hugo site.
-build:
+hugo.build:
 	@echo "==> building"
 	@hugo --quiet --baseURL $(HUGO_BASE_URL) -d $(HUGO_BUILD_DIR)
 .PHONY: build
 
-# Clean build artifacts.
-clean:
+# Clean hugo build artifacts.
+hugo.clean:
 	rm -fr $(HUGO_BUILD_DIR)
 .PHONY: clean
