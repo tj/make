@@ -1,4 +1,4 @@
-include github.com/tj/make/stats
+include github.com/tj/make/cloc
 include github.com/tj/make/todo
 
 # Run all tests.
