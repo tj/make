@@ -4,7 +4,7 @@ BUILD_DIR ?= build
 
 # Start client dev server.
 client.start:
-	@gopherjs -m -v serve --http :3000 $(GOPHERJS_PKG)/client
+	@gopherjs serve -v -m --http :3000 $(GOPHERJS_PKG)/client
 .PHONY: client.start
 
 # Build client javascript bundle.
