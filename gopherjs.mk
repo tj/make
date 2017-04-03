@@ -1,9 +1,16 @@
-GOPHERJS_PKG=$(subst $(GOPATH)/src/,,$(PWD))
+GOPHERJS_PKG = $(subst $(GOPATH)/src/,,$(PWD))
+GOPHERJS_BUILD_FILE ?= bundle.js
+BUILD_DIR ?= build
 
 # Start client dev server.
 client.start:
 	@gopherjs -m -v serve --http :3000 $(GOPHERJS_PKG)/client
 .PHONY: client.start
+
+# Build client javascript bundle.
+client.build:
+	@gopherjs build $(GOPHERJS_PKG)/client -m -o $(BUILD_DIR)/$(GOPHERJS_BUILD_FILE)
+.PHONY: client.build
 
 # Output client dependency graph.
 client.deps.graph:
