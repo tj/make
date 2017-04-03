@@ -7,7 +7,7 @@ client.start:
 
 # Output client dependency graph.
 client.deps.graph:
-	@godepgraph $(GOPHERJS_PKG)/client | dot -Tsvg | browser
+	@godepgraph --tags js -d $(GOPHERJS_PKG)/client | dot -Tsvg | browser
 .PHONY: client.deps.graph
 
 # Output client dependency sizes.
