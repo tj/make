@@ -1,5 +1,5 @@
 GOPHERJS_PKG = $(subst $(GOPATH)/src/,,$(PWD))
-GOPHERJS_BUILD_FILE ?= bundle.js
+GOPHERJS_BUILD_FILE ?= client.js
 BUILD_DIR ?= build
 
 # Start client dev server.
