@@ -11,11 +11,6 @@ install:
 	@go install ./cmd/...
 .PHONY: install
 
-# Build release binaries.
-build:
-	@gox -os="linux darwin windows openbsd" ./...
-.PHONY: build
-
 # Release binaries to GitHub.
 release:
 	@goreleaser --config .goreleaser.yml
