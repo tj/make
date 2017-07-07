@@ -13,5 +13,5 @@ install:
 
 # Release binaries to GitHub.
 release:
-	@goreleaser --config .goreleaser.yml
+	@goreleaser --rm-dist --config .goreleaser.yml
 .PHONY: release
